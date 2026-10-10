@@ -1,25 +1,4 @@
-# main.py
-# -*- coding: utf-8 -*-
-"""
-7tech Telegram bot (RU/UZ) — aiogram v3.7+
 
-Features
-- Start → choose language (RU / UZ)
-- After language selection: brand photo + about text, show main menu (Products, Service, Contacts, About Us, Back)
-- Products: large catalog list; when user selects a category, bot sends the specified URL
-- Service: warranty image + "I agree" → collect: appliance → region → problem → phone (typed) → exact address → send confirmation to user and forward the ticket to staff chat(s) of the region (supports multiple chat_ids per region)
-- Everywhere: Back button
-- Emoji in the end of friendly messages
-
-Setup
-1) pip install aiogram==3.*
-2) Put your images into ./images/ :
-   - brand_ru.jpg, brand_uz.jpg
-   - warranty_ru.jpg, warranty_uz.jpg
-3) Set your bot token in BOT_TOKEN below (or via env var)
-4) Fill STAFF_BY_REGION chat_id lists with your Telegram chat IDs (can be groups or users). Multiple staff per region is supported.
-5) python main.py
-"""
 
 import asyncio
 import logging
@@ -46,7 +25,7 @@ from aiogram.types import (
 from aiogram.types import FSInputFile
 
 # ========================= CONFIG =========================
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8494662446:AAFoV6ikXUXMRYYJFKu8TrDVi4JqKsqgyYs")
+BOT_TOKEN = os.getenv("BOT_TOKEN", " ")
 IMAGES_DIR = Path(__file__).parent / "images"
 
 # Map of region -> list of staff chat IDs (edit these!)
